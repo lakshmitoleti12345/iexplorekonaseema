@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iExplore Konaseema</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background: rgba(34, 139, 34, 0.9);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .pair-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pair {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: white;
+      border-radius: 12px;
+      margin: 15px;
+      padding: 15px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pair:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    iframe {
+      width: 48%;
+      height: 200px;
+      border-radius: 8px;
+    }
+
+    .news-box {
+      width: 48%;
+      background: #f0fff0;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    /* Floating leaf animation */
+    .leaf {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background: url('https://cdn-icons-png.flaticon.com/512/765/765613.png') no-repeat center/contain;
+      animation: floatLeaf 15s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatLeaf {
+      0% { transform: translateY(-50px) rotate(0deg); left: 10%; }
+      50% { transform: translateY(50vh) rotate(180deg); left: 50%; }
+      100% { transform: translateY(100vh) rotate(360deg); left: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🌿 iExplore Konaseema</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1 style="text-align:center; color:#2e8b57;">Welcome to iExplore Konaseema</h1>
+    <div class="pair-container">
+      <!-- 10 Video + News pairs -->
+      <div class="pair">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <div class="news-box">
+          <p>Konaseema mangroves are thriving.</p>
+          <p>Farmers adopt eco-friendly practices.</p>
+          <p>Tourists flock to lush backwaters.</p>
+          <p>Rare birds spotted in wetlands.</p>
+          <p>Tree plantation drive transforms villages.</p>
+        </div>
+      </div>
+      <div class="pair">
+        <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4"></iframe>
+        <div class="news-box">
+          <p>Eco-tourism projects highlight beauty.</p>
+          <p>River clean-up restores biodiversity.</p>
+          <p>Coconut groves attract organic farming.</p>
+          <p>Schools inspire young conservationists.</p>
+          <p>Local fishermen embrace sustainability.</p>
+        </div>
+      </div>
+      <!-- Repeat until 10 pairs -->
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos">
+    <h2 style="text-align:center; color:#2e8b57;">Nature Videos Gallery</h2>
+    <div class="pair-container">
+      <!-- 20 Video + News pairs -->
+      <div class="pair">
+        <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ"></iframe>
+        <div class="news-box">
+          <p>Konaseema backwaters attract eco-tourists.</p>
+          <p>Community-led mangrove restoration succeeds.</p>
+          <p>Organic farming gains popularity.</p>
+          <p>Birdwatchers spot rare migratory species.</p>
+          <p>Local schools launch nature clubs.</p>
+        </div>
+      </div>
+      <div class="pair">
+        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A"></iframe>
+        <div class="news-box">
+          <p>River clean-up campaigns restore biodiversity.</p>
+          <p>Villagers plant thousands of saplings.</p>
+          <p>Tourists enjoy serene coconut groves.</p>
+          <p>Wetlands provide habitat for wildlife.</p>
+          <p>Eco-tourism boosts local economy.</p>
+        </div>
+      </div>
+      <!-- Repeat until 20 pairs -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 style="text-align:center; color:#2e8b57;">About Konaseema</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; color:#333;">
+      Konaseema is a paradise of coconut groves, rivers, and mangroves. This site showcases its natural beauty through videos and news updates.
+    </p>
+  </section>
+
+  <!-- Floating Leaves -->
+  <div class="leaf" style="left:20%; animation-delay:0s;"></div>
+  <div class="leaf" style="left:40%; animation-delay:5s;"></div>
+  <div class="leaf" style="left:60%; animation-delay:10s;"></div>
+</body>
+</html>
